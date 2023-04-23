@@ -24,7 +24,7 @@ const Main = () => {
   useEffect(()=>{
     
     fetchDetails()
-  },[1])
+  },[])
 
   return (
     <div >
