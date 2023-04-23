@@ -21,10 +21,15 @@ const Main = () => {
     // console.log(data.meals[0]);
   setMeals(data.meals[0])
   }
-  useEffect(()=>{
+  // useEffect(()=>{
     
-    fetchDetails()
-  },[])
+  //   fetchDetails()
+  // },[])
+
+  useEffect(() => {
+     
+    fetchDetails();
+  }, [fetchDetails]);
 
   return (
     <div >
