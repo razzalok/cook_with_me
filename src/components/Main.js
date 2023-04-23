@@ -23,7 +23,7 @@ const Main = () => {
   }
   useEffect(()=>{
     fetchDetails()
-  })
+  },["Sushi"])
 
   return (
     <div >
