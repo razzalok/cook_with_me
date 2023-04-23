@@ -22,8 +22,9 @@ const Main = () => {
   setMeals(data.meals[0])
   }
   useEffect(()=>{
+    
     fetchDetails()
-  },["Sushi"])
+  },[meals])
 
   return (
     <div >
