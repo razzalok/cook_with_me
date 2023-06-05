@@ -37,7 +37,7 @@ const Main = () => {
       <p className='bg-cyan-900 py-5 flex-initial flex-auto w-[40%] text-5xl text-[#CAD5E2] font-extrabold text-center w-full md:w-auto'>Cook With Me</p>
 
       <form onSubmit={handleSubmit} className='flex-initial text-center mt-10 ' >
-            <input className='rounded-lg border-2 w-[40%] h-10 p-6 bg-[#758283] text-[#fff] text-[20px] border-none ' type="text" name='meal' value={meal} onChange={(e) => setMeal(e.target.value)} />
+            <input className='rounded-lg border-2 w-[40%] h-10 p-6 bg-[#758283] text-[#fff] text-[20px] border-none ' type="text" name='meal' value={meal}  />
             <input className='rounded-lg border-2  ml-2 p-2 bg-[#207398] text-[#fff] text-[20px] border-none  hover:bg-[#03203C] ease-in duration-300' id='search' type="submit" />
         </form>
         <Hero meals={meals}/>
