@@ -6,12 +6,12 @@ const Main = () => {
  const [meals,setMeals] = useState({})
  const baseUrl = 'https://www.themealdb.com/api/json/v1/1/search.php?s='
 
-  const handleSubmit = (event) => {
-      event.preventDefault();
-      // console.log(meal);
-      setMeal(meal)
-      fetchDetails()
-    }
+  // const handleSubmit = (event) => {
+  //     event.preventDefault();
+  //     // console.log(meal);
+  //     setMeal(meal)
+  //   }
+    
 
   const fetchDetails =  useCallback(async()=>{
   const {data}= await Axios.get(baseUrl+meal)
@@ -21,13 +21,10 @@ const Main = () => {
     // console.log(data.meals[0]);
   setMeals(data.meals[0])
   },[meal])
-  // useEffect(()=>{
-    
-  //   fetchDetails()
-  // },[])
+ 
+  fetchDetails()
 
   useEffect(() => {
-     
     fetchDetails();
   }, [fetchDetails]);
 
