@@ -24,9 +24,9 @@ const Main = () => {
  
   fetchDetails()
 
-  useEffect(() => {
-    fetchDetails();
-  }, [fetchDetails]);
+  // useEffect(() => {
+  //   fetchDetails();
+  // }, [fetchDetails]);
 
   return (
     <div >
