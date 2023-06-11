@@ -1,4 +1,4 @@
-import {useState ,useCallback} from 'react'
+import {useState ,useCallback,useEffect} from 'react'
 import Axios from 'axios'
 import Hero from './Hero'
 const Main = () => {
@@ -21,7 +21,9 @@ const handleSubmit = (e) => {
   fetchDetails()
   setMeal('')
 }
-    
+useEffect(()=>{
+  fetchDetails()
+})   
 
   
  
