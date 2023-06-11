@@ -14,7 +14,7 @@ const Main = () => {
   
  useEffect(()=>{
   fetchDetails()
-},[meal])   
+})   
  const handleChange =(e)=>{
   setMeal(e.target.value);
   
@@ -23,7 +23,7 @@ const Main = () => {
 
 const handleSubmit = (e) => {
   e.preventDefault()
-  fetchDetails()
+  // fetchDetails()
   setMeal('')
 }
 
