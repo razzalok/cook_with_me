@@ -12,7 +12,7 @@ const Main = () => {
   setMeals(data.meals[0])
   },[meal])
   
-  fetchDetails()
+  
   
  const handleChange =(e)=>{
   setMeal(e.target.value);
