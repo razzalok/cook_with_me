@@ -14,7 +14,7 @@ const Main = () => {
   
   useEffect(()=>{
     fetchDetails();
-  },[])
+  })
   
  const handleChange =(e)=>{
   setMeal(e.target.value);
