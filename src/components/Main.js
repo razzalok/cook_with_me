@@ -1,4 +1,4 @@
-import React, {useEffect,  useState,useCallback } from 'react'
+import {useState } from 'react'
 import Axios from 'axios'
 import Hero from './Hero'
 const Main = () => {
@@ -10,20 +10,22 @@ const Main = () => {
   setMeal(e.target.value);
   
  }
-const handleSubmit = (e) => {
-  e.preventDefault()
-  
-  setMeal('')
-}
-    
-
-  const fetchDetails =  useCallback(async()=>{
+ const fetchDetails =  useCallback(async()=>{
   const {data}= await Axios.get(baseUrl+meal)
     console.log(data);
   setMeals(data.meals[0])
   },[meal])
- 
+  
+const handleSubmit = (e) => {
+  e.preventDefault()
   fetchDetails()
+  setMeal('')
+}
+    
+
+  
+ 
+  
 
   return (
     <div >
