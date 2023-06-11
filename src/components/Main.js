@@ -1,4 +1,4 @@
-import {useState } from 'react'
+import {useState ,useCallback} from 'react'
 import Axios from 'axios'
 import Hero from './Hero'
 const Main = () => {
@@ -15,7 +15,7 @@ const Main = () => {
     console.log(data);
   setMeals(data.meals[0])
   },[meal])
-  
+
 const handleSubmit = (e) => {
   e.preventDefault()
   fetchDetails()
