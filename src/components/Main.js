@@ -1,4 +1,4 @@
-import {useState ,useCallback} from 'react'
+import {useState ,useCallback,useEffect} from 'react'
 import Axios from 'axios'
 import Hero from './Hero'
 const Main = () => {
@@ -16,7 +16,6 @@ const Main = () => {
   
  const handleChange =(e)=>{
   setMeal(e.target.value);
-  
  }
  
 
@@ -25,7 +24,9 @@ const handleSubmit = (e) => {
   fetchDetails()
   setMeal('')
 }
-
+useEffect(()=>{
+  handleSubmit();
+})
   return (
     <div >
       
