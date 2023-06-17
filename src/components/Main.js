@@ -17,7 +17,7 @@ const Main = () => {
   fetchDetails()
 })   
  const handleChange =(e)=>{
-  setDish(e.target.value)
+  setDish(e.target.meal)
  }
  
 
