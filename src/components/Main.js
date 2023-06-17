@@ -10,7 +10,7 @@ const Main = () => {
  const fetchDetails = async()=>{
   const {data}= await Axios.get(baseUrl+meal)
     console.log(data);
-  setMeals(data.meals[0])
+    setMeals(data.meals[0])
   }
 
  useEffect(()=>{
@@ -25,7 +25,7 @@ const handleSubmit = (e) => {
   e.preventDefault()
   setMeal(dish);
   fetchDetails()
-  setMeal('')
+  
 }
 
   return (
