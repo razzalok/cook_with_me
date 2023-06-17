@@ -7,15 +7,15 @@ const Main = () => {
  const [meals,setMeals] = useState({})
  const baseUrl = 'https://www.themealdb.com/api/json/v1/1/search.php?s='
 
- const fetchDetails =  useCallback(async()=>{
+ const fetchDetails = async()=>{
   const {data}= await Axios.get(baseUrl+meal)
     console.log(data);
   setMeals(data.meals[0])
-  },[meal])
+  }
 
-//  useEffect(()=>{
-//   fetchDetails()
-// })   
+ useEffect(()=>{
+  fetchDetails()
+})   
  const handleChange =(e)=>{
   setDish(e.target.value)
  }
