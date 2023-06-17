@@ -13,9 +13,9 @@ const Main = () => {
   setMeals(data.meals[0])
   },[meal])
 
- useEffect(()=>{
-  fetchDetails()
-})   
+//  useEffect(()=>{
+//   fetchDetails()
+// })   
  const handleChange =(e)=>{
   setDish(e.target.value)
  }
